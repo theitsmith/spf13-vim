@@ -1,3 +1,27 @@
+# Local Updates
+
+This repo is forked to apply local changes and to fix some issues (upstream doesn't appear to have been updated in a while and has a number of open issues and PRs).
+
+Currently, the following local modifications have been made:
+
+* Updated bootstrap.sh to use this repo.
+* Updated repo URL for HTML-AutoCloseTag (previous repo appears to have been deleted).
+
+To use this repo, you must first uninstall the upstream repo--remove all files except ~/.vimrc.local (where your local Vim configuration changes are typically stored by default). Once that is done, use the same commands for upstream except with this repo's bootstrap.sh:
+
+```bash
+
+    curl https://raw.githubusercontent.com/theitsmith/spf13-vim/3.0/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
+```
+
+If you have a bash-compatible shell you can run the script directly:
+```bash
+
+    sh <(curl https://raw.githubusercontent.com/theitsmith/spf13-vim/3.0/bootstrap.sh -L)
+```
+
+If you want to install on Windows, you'll need to install from source (`choco install spf13-vim`, as noted in the Windows installation below, won't contain my changes). I don't use Windows, so if you do this, please let me know so I can add the instructions here. It's just not something that I'm currently interested in using, nor do I have the time or inclination to test modified instructions (i.e. instructions that are modified to use this repo) to validate that they'd work.
+
 # spf13-vim : Steve Francia's Vim Distribution
 
                     __ _ _____              _
